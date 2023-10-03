@@ -1,3 +1,60 @@
 .header
     background: $dark-color-4
-    color: $main-color
+    color: $main-color    
+    &__wrap
+        margin: 0 auto
+        padding: 0 20px
+        max-width: 1534px
+        display: flex
+        justify-content: space-between
+        padding-top: 47px        
+    &__info
+        display: flex
+        align-items: flex-end
+        gap: 41px
+    &__title
+        display: flex
+        align-items: flex-end     
+        gap: 10px
+    &__name
+        color: $main-color
+        font-family: $roboto-bl
+        font-size: 28px
+        line-height: normal
+        letter-spacing: -2px
+    &__text
+        color: $main-color
+        font-family: $roboto-reg
+        font-size: 14px
+        line-height: normal
+        letter-spacing: 5.6px
+        text-transform: uppercase
+        margin-bottom: 7px
+    &__icons
+        display: flex
+        align-items: flex-end
+        gap: 25px
+    &__social-link
+        &:hover path
+            fill: #E54646
+            transition: fill 0.4s ease            
+    &__contacts
+        display: flex
+        gap: 29px
+        align-items: center
+    &__contact
+        display: flex
+        align-items: center
+        gap: 11px
+        &:hover path
+            fill: #E54646
+            transition: fill 0.4s ease
+        &:hover .header__link
+            color: #E54646
+            transition: color 0.4s ease
+    &__link
+        color: $main-color
+        font-family: $roboto-reg
+        font-size: 18px
+        line-height: 150%
+        text-decoration-line: underline   
