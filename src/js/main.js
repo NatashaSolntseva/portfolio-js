@@ -10,37 +10,37 @@ const cardData = [
   {
     src: "img/card1.png",
     srcset: "img/card1.png, img/card1@2x.png 2x",
-    srcsetWp: "img/card1.webp, img/card1@2x.webp 2x",
+    srcsetWp: "img/card1@2x.webp 2x",
     caption: "Agency Template",
   },
   {
     src: "img/card2.png",
     srcset: "img/card2.png, img/card2@2x.png 2x",
-    srcsetWp: "img/card2.webp, img/card2@2x.webp 2x",
+    srcsetWp: "img/card2@2x.webp 2x",
     caption: "Lifestyle Blog Template",
   },
   {
     src: "img/card3.png",
     srcset: "img/card3.png, img/card3@2x.png 2x",
-    srcsetWp: "img/card3.webp, img/card3@2x.webp 2x",
+    srcsetWp: "img/card3@2x.webp 2x",
     caption: "Saas Landing Page",
   },
   {
     src: "img/card4.png",
     srcset: "img/card4.png, img/card4@2x.png 2x",
-    srcsetWp: "img/card4.webp, img/card4@2x.webp 2x",
+    srcsetWp: "img/card4@2x.webp 2x",
     caption: "Lucas Portfolio Template",
   },
   {
     src: "img/card5.png",
     srcset: "img/card5.png, img/card5@2x.png 2x",
-    srcsetWp: "img/card5.webp, img/card5@2x.webp 2x",
+    srcsetWp: "img/card5@2x.webp 2x",
     caption: "Serene Product Template",
   },
   {
     src: "img/card6.png",
     srcset: "img/card6.png, img/card6@2x.png 2x",
-    srcsetWp: "img/card6.webp, img/card6@2x.webp 2x",
+    srcsetWp: "img/card6@2x.webp 2x",
     caption: "Sajna eCommerce Template",
   },
   // {
@@ -170,6 +170,13 @@ window.addEventListener("DOMContentLoaded", () => {
   const popUpCloseButton = document.querySelector(".pop-up__btn-close");
 
   popUpCloseButton.addEventListener("click", closePopUp);
+
+  // Add event listener to Esc
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closePopUp();
+    }
+  });
 
   // Add event listener to the modal overlay
   const modalOverlay = document.querySelector(".pop-up");
