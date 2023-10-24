@@ -61,6 +61,12 @@ const cardData = [
   //   srcsetWp: "img/card9.webp, img/card9.webp 2x",
   //   caption: "Nice Picture",
   // },
+  // {
+  //   src: "img/card10.jpeg",
+  //   srcset: "img/card10.jpeg, img/card10.jpeg 2x",
+  //   srcsetWp: "img/card10.webp, img/card10.webp 2x",
+  //   caption: "Nice and long Picture",
+  // },
 ];
 
 // Function for creating a progress bar
