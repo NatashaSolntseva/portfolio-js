@@ -229,7 +229,7 @@
         max-width: 2000px
         background-image: url(../img/clients.png)
         background-repeat: no-repeat
-        background-position-x: -10%        
+        background-position-x: -5%        
         @include md
             background-position-x: 0%
         @include sm
@@ -242,7 +242,8 @@
         display: flex
         flex-direction: column
         align-items: center
-        text-align: center    
+        text-align: center
+        position: relative    
     &__title
         color: $dark-color-2
         font-family: $roboto-reg
@@ -251,6 +252,10 @@
         text-transform: uppercase
         letter-spacing: 5px
         padding-bottom: 76px
+    &__quote-icon
+        position: absolute
+        top: 5%
+        left: 13%
     &__quote
         max-width: 829px    
     &__text
