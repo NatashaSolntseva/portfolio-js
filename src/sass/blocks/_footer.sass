@@ -1,25 +1,72 @@
 .footer
     background-color: $dark-color-4
-    padding-bottom: 94px    
+    padding-bottom: 94px
+    @include xs
+        padding-bottom: 50px    
     &__top
         width: 100%
         display: flex
         justify-content: space-between
+        @include xs
+            flex-direction:  column
+            gap: 50px
     &__nav
         display: flex
         justify-content: space-between
+        gap: 146px
+        @include sm
+            gap: 50px
+            flex-wrap: wrap   
     &__link
         color: $light-color
         font-family: $roboto-reg
         font-size: 15px
-        line-height: 200%
+        line-height: 170%
+        display: inline-block
+        max-width: 70px
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
         &:hover
             color: #E54646
-            transition: color 0.4s ease                       
+            transition: color 0.4s ease
+    &__info-wrap
+        padding-left: 6px        
+    &__email
+        color: $main-color
+        font-family: $roboto-reg
+        font-size: 21px
+        line-height: 143%
+        text-decoration-line: underline 
+    &__adress
+        color: $light-color
+        font-family: $roboto-reg
+        font-size: 15px
+        line-height: 200%
+    &__tel
+        color: $light-color
+        font-family: $roboto-reg
+        font-size: 15px
+        line-height: 200%
+    &__adress-link:hover
+        color: #E54646
+        transition: color 0.4s ease              
+    &__icons-wrap
+        padding-top: 23px
+        display: flex
+        gap: 17px
+    &__social-link                                   
+        &:hover path
+            fill: #E54646
+            transition: fill 0.4s ease     
     &__bottom
         padding-top: 123px
         display: flex
         justify-content: space-between
+        @include xs
+            padding-top: 50px
+            flex-direction: column-reverse
+            gap: 20px
     &__copyright
         color: $light-color
         font-family: $roboto-reg

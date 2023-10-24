@@ -1,8 +1,34 @@
+.page 
+    background: $dark-color-4
+    &__background_type_light
+        background: $main-color
+        margin: 0 auto   
 .promo
-    background-color: $dark-color-4
-    padding-bottom: 195px
-    padding-top: 181px
-    &__wrap        
+    display: flex
+    align-items: center
+    justify-content: center
+    &__bg
+        width: 100%
+        max-width: 1700px        
+        padding-bottom: 195px
+        padding-top: 181px  
+        background-image: url(../img/face_bg.png)
+        background-repeat: no-repeat
+        background-position-x: 104%
+        background-position-y: 524%
+        @include sm
+            //background: none
+            background-position-x: 0px
+            background-position-y: 32%
+            padding-bottom: 50px
+            padding-top: 50px
+        @include xs
+            background-size: cover
+            //background-position-y: 1%
+            padding-top: 50px
+            padding-bottom: 100px
+        @include xxs
+            background: none              
     &__title
         color: $main-color
         font-family: $roboto-bl
@@ -10,33 +36,110 @@
         line-height: 100%
         letter-spacing: -4px
         max-width: 829px
+        @include sm
+            font-size: 80px
+            max-width: 50%
+        @include xs
+            font-size: 50px
+            letter-spacing: 0px
+            max-width: 60%
+        @include xxs
+            max-width: 100%    
+
     &__text  
         color: $main-color
         font-family: $roboto-reg
         font-size: 18px
         line-height: 150%
         max-width: 727px
-        padding-top: 12px        
+        padding-top: 12px
+        @include sm
+            padding-top: 50px
+        @include xs
+            max-width: 60%
+        @include xxs
+            max-width: 100%                  
 .skills
     padding-top: 176px
-    padding-bottom: 151px
+    padding-bottom: 100px
+    @include xs
+        padding-top: 100px
     &__wrap
         display: flex        
         gap:275px
+        @include sm
+            gap:60px
+        @include xs
+            flex-direction: column                  
     &__left
         display: flex
         flex-direction: column
         justify-content: flex-start
         gap: 109px
-        flex-basis: 493px 
+        flex-basis: 493px
+        @include xs
+            gap:50px
+            flex-basis: 100%
+    &__title
+        color: $dark-color-2
+        font-family: $roboto-bl
+        font-size: 32px
+        line-height: 85%
+        text-transform: uppercase    
+    &__progress-bar-container
+        display: flex
+        flex-direction: column
+        gap: 17px  
     &__right
         display: flex
         flex-direction: column
         justify-content: flex-start
-        gap: 109px
+        gap: 100px
+        @include xs
+            gap: 50px
+    &__container
+        display: flex
+        flex-direction: column
+        gap: 20px     
+    &__date
+        color: $dark-color-2
+        font-family: $roboto-bl
+        font-size: 64px
+        line-height: 100%
+        @include xs
+            font-size: 50px
+    &__nomination
+        color: $dark-color-1
+        font-family: $roboto-bi
+        font-size: 21px
+        line-height: 130%
+        padding-bottom: 18px
+    &__caption
+        color: $dark-color-1
+        font-family: $roboto-reg
+        font-size: 18px
+        line-height: 150%
+
 .expertise
-    padding-bottom: 300px
-    &__wrap
+    display: flex
+    justify-content: center
+    &__bg
+        margin-left: 20px
+        width: 100%
+        max-width: 2000px
+        background-image: url(../img/design.png)
+        background-repeat: no-repeat
+        background-position-x: -15%        
+        padding-top: 51px
+        padding-bottom: 300px
+        @include md
+            background-position-x: 0%
+        @include sm
+                padding-top: 150px
+                padding-bottom: 200px
+        @include xs
+                padding-top: 50px
+                padding-bottom: 70px        
     &__title
         color: $dark-color-2
         font-family: $roboto-bl
@@ -47,9 +150,46 @@
         padding-bottom: 96px
     &__content-wrap                                 
         display: flex
-        gap: 205px        
+        gap: 205px
+        padding-left: 43px
+        @include md
+            gap: 80px
+            padding-left: 0px
+            justify-content: center
+        @include sm
+            gap: 50px
+        @include xs
+            flex-direction: column
+            align-items: center
+            gap: 70px    
+    &__item
+        position: relative    
+    &__count
+        color: $dark-color-2
+        font-family: $roboto-reg
+        font-size: 230px
+        line-height: 73%
+        letter-spacing: -23px
+        @include sm
+            font-size: 160px
+            letter-spacing: -15px
+    &__caption      
+        color: $dark-color-2
+        font-family: $roboto-reg
+        font-size: 18px
+        line-height: 200%
+        background: $main-color                
+        position: absolute
+        top: 35%
+        left: 0        
+        padding-right: 8px
+        &_position_left
+            left: -28px  
 .portfolio
-    padding-bottom: 196px
+    padding-bottom: 156px
+    margin-top: -130px
+    @include xs
+        margin-top: 0
     &__wrap
         display: flex
         flex-direction: column
@@ -78,7 +218,26 @@
         padding-bottom: 117px
         max-width: 527px        
 .testimonials
-    padding-bottom: 190px
+    display: flex
+    justify-content: center
+    &__bg
+        padding-top: 40px
+        padding-bottom: 300px
+        background-image: url(../img/clients.png)
+        margin-left: 20px
+        width: 100%
+        max-width: 2000px
+        background-image: url(../img/clients.png)
+        background-repeat: no-repeat
+        background-position-x: -10%        
+        @include md
+            background-position-x: 0%
+        @include sm
+                padding-top: 150px
+                padding-bottom: 200px
+        @include xs
+                padding-top: 50px
+                padding-bottom: 260px    
     &__wrap
         display: flex
         flex-direction: column
@@ -99,15 +258,31 @@
         font-family: $roboto-m
         font-size: 32px
         line-height: 160%
-        padding-bottom: 20px         
+        padding-bottom: 20px
+    &__cite
+        color: $dark-color-2
+        font-family: $roboto-reg
+        font-size: 18px
+        line-height: 180%
+        font-style: normal
+        &_type_bold
+            font-family: $roboto-b              
 .experience
     padding-bottom: 211px
+    margin-top: -100px
+    @include xs
+        margin-top: -100px
     &__wrap
         display: flex        
         justify-content: space-between
+        @include xs
+            flex-direction: column-reverse
+            gap: 50px
     &__info-card
         display: flex
         flex-direction: column
+        &:not(:last-child)
+            padding-bottom: 70px          
     &__title
         color: $dark-color-2
         font-family: $roboto-b
@@ -115,24 +290,55 @@
         line-height: 96%
         letter-spacing: -1.4px
         text-transform: uppercase
-        padding-bottom: 119px  
+        padding-bottom: 119px
+        @include xs
+            padding-bottom: 50px
     &__date
         color: $dark-color-2
         font-family: $roboto-bl
         font-size: 64px
         line-height: 100%
-        padding-bottom: 14px        
-.contactme
+        padding-bottom: 14px
+        @include sm
+            font-size: 48px
+    &__role
+        color: $dark-color-1
+        font-family: $roboto-bi
+        font-size: 21px
+        line-height: 130%
+        padding-bottom: 18px
+        max-width: 350px
+        @include xs
+            max-width: 100%      
+    &__place
+        color: $dark-color-1
+        font-family: $roboto-reg
+        font-size: 18px
+        line-height: 150%                    
+        max-width: 357px
+        @include xs
+            max-width: 100%
+.contactme    
     background-color: $dark-color-4
     padding-bottom: 200px
     padding-top: 189px
+    @include sm
+        padding-bottom: 100px
+        padding-top: 100px
     &__wrap
         width: 100%
         display: flex
         justify-content: space-between
         align-items: flex-start
+        @include sm
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            gap: 50px
     &__content
         max-width: 464px
+        @include sm
+            max-width: 100%
     &__title        
         color: $main-color
         font-family: $roboto-bl
@@ -145,21 +351,53 @@
         color: $light-color
         font-family: $roboto-reg
         font-size: 18px
-        line-height: 150%                             
-.cards 
+        line-height: 150%                                         
+
+.cards-container 
     display: grid
     grid-template-columns: repeat(3,1fr)
     column-gap: 33px
     row-gap: 24px
+    padding-left: 20px
+    padding-right: 20px
+    @include xl
+        grid-template-columns: repeat(2,1fr)
+    @include sm
+        grid-template-columns: repeat(1,1fr)       
 .card
     display: flex
     flex-direction: column
     justify-content: center    
+    &__img-wrapper
+        width: 487px
+        height: 366px
+        cursor: pointer
+        & img
+            width: 100%
+            height: 100%
+            object-fit: cover
+        @include md
+            max-width: 400px
+            height: 250px
+        @include xs
+            width: 100%
+            
+            height: 100%         
+    &__caption
+        color: $dark-color-2
+        font-family: $roboto-reg
+        font-size: 18px
+        line-height: 150%
+        padding-top: 31px     
 .form
+    width: 470px
     display: grid
     grid-template-columns: repeat(2, 1fr)
     column-gap: 7px
     row-gap: 5px
+    @include xxs
+        width: 100%
+        grid-template-columns: repeat(1, 1fr)
     &__input
         background: rgba(241, 241, 241, 0.10)
         border: none
@@ -167,5 +405,115 @@
         color: $dark-color-5
         font-family: $roboto-reg
         font-size: 15px
-        line-height: 100%    
+        line-height: 100%
+        outline: none
+        padding: 0 17px        
+        &_type_message
+            padding-top: 16px
+            grid-column: 1/3
+            height: 135px
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            resize: none
+            @include xxs
+                grid-column: 1/2                      
+    &__btn
+        grid-column: 1/3
+        background: #E54646
+        height: 50px
+        color: $main-color
+        font-family: $roboto-b
+        font-size: 12px
+        line-height: 100%
+        text-transform: uppercase
+        letter-spacing: 1.2px
+        padding-left: 18px
+        padding-right: 27px
+        text-align: left 
+        display: flex
+        align-items: center
+        justify-content: space-between
+        cursor: pointer
+        @include xxs
+            grid-column: 1/2    
+        &:hover
+            background: rgba(241, 241, 241, 0.10)
+            transition: background 0.4s ease  
 
+.progress-bar
+    &__label
+        display: block      
+        color: $dark-color-2
+        font-family: $roboto-b
+        font-size: 15px
+        line-height: 180%
+        text-transform: uppercase
+        padding-bottom: 10px
+    &__track
+        height: 3px
+        width: 100%
+        background: $light-color
+    &__fill
+        height: 3px        
+        background: #FF5B5B     
+
+.pop-up
+    display: flex
+    position: fixed
+    right: 0
+    top: 0
+    left: 0
+    bottom: 0
+    align-items: center
+    justify-content: center
+    background-color: rgba(0, 0, 0, .9)
+    visibility: hidden
+    opacity: 0
+    transition: visibility .3s linear, opacity .3s linear
+    z-index: 2
+    &__container
+        position: relative                
+        min-width: 430px
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15)
+        margin: 0
+        padding: 0
+        border-radius: 0
+        background-color: transparent
+        @include xxs            
+            min-width: 280px
+    &__img-wrapper
+        margin: 0
+        padding: 0
+    &__img
+        width: 85vw
+        
+        //max-height: 85vh
+    &__caption
+        color: $main-color
+        padding-top: 10px
+        font-size: 12px
+        line-height: 100%  
+    &__btn-close
+        margin: 0
+        padding: 0
+        position: absolute
+        top: -40px
+        right: -40px    
+        display: block
+        width: 24px
+        height: 24px
+        background-image: url(../icons/close.svg)
+        background-size: contain          
+        background-repeat: no-repeat          
+        border: none          
+        &:hover 
+            transition: opacity 0.4s            
+            opacity: 0.5                     
+            cursor: pointer
+        @include xxs
+            top: -35px
+            right: 0px
+
+.no-scroll 
+    overflow: hidden         
